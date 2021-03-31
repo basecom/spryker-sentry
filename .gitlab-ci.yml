@@ -1,7 +1,11 @@
+image: docker:stable
+
 stages:
     - deploy
 
 deploy:
     stage: deploy
+    before_script:
+        - apk add --update curl && rm -rf /var/cache/apk/*
     script:
         - 'curl --header "Job-Token: $CI_JOB_TOKEN" --data branch=master "https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/packages/composer"'
