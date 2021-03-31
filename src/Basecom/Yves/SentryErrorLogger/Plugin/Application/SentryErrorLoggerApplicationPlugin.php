@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Basecom\Yves\SentryErrorLogger\Plugin\Application;
 
-use Spryker\Glue\Kernel\AbstractPlugin;
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface;
+use Spryker\Yves\Kernel\AbstractPlugin;
 
 /**
  * @method \basecom\Yves\SentryErrorLogger\SentryErrorLoggerConfig getConfig()
