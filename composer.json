@@ -1,0 +1,28 @@
+{
+  "name": "basecom/spryker-sentry",
+  "description": "spryker package to utilize sentry for error-logging in all layers",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Kroll",
+      "email": "s.kroll@basecom.de"
+    }
+  ],
+  "require": {
+    "php": ">=7.3.0",
+    "spryker/error-handler": "^2.1.0",
+    "spryker/kernel": "^3.0.0",
+    "sentry/sdk": "^3.1"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-latest"
+  },
+  "autoload": {
+    "psr-4": {
+      "Basecom\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
