@@ -56,7 +56,7 @@ Add `SentryApplicationPlugin` to `Pyz\Yves\ShopApplication\ShopApplicationDepend
 
 
 ## Configuration
-Configure the sentry logger in config_*.php 
+Configure the sentry logger in config_*.php
 ```
 <?php
 

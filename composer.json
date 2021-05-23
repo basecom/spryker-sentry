@@ -1,7 +1,10 @@
 {
   "name": "basecom/spryker-sentry",
+  "type": "library",
   "description": "spryker package to utilize sentry for error-logging in all layers",
   "license": "MIT",
+  "homepage": "https://www.basecom.de",
+  "keywords": ["spryker", "sentry"],
   "authors": [
     {
       "name": "Sebastian Kroll",
