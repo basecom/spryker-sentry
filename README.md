@@ -1,5 +1,5 @@
 # basecom/spryker-sentry
-package for php-level sentry logging in Spryker
+spryker package to utilize sentry fo php-level error-logging in all layers
 
 ## Installation
 Install via composer
@@ -7,7 +7,7 @@ Install via composer
 $ composer require basecom/spryker-sentry
 ```
 
-## Integraion
+## Integration
 1) Add Basecom to namespaces in _config_default.php_
 ```
 $config[KernelConstants::CORE_NAMESPACES][] = 'Basecom';
