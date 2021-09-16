@@ -31,8 +31,8 @@ class SentryConfig extends AbstractBundleConfig
     /**
      * @return string
      */
-    public function getSentryEnvironment(): string
+    public function getSentryEnvironment(bool $forConsole = false): string
     {
-        return $this->get(SentryConstants::SENTRY_ENVIRONMENT_ZED, APPLICATION_ENV);
+        return $this->get($forConsole ? SentryConstants::SENTRY_ENVIRONMENT_CONSOLE : SentryConstants::SENTRY_ENVIRONMENT_ZED, APPLICATION_ENV);
     }
 }

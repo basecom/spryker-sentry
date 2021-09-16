@@ -58,4 +58,14 @@ interface SentryConstants
      * @api
      */
     public const SENTRY_ENVIRONMENT_YVES = 'YVES_SENTRY_ERROR_LOGGER_ENVIRONMENT';
+
+    /**
+     * Specification:
+     * - Set the environment variable to be displayed in Sentry as the current system
+     * - type string
+     * - default APPLICATION_ENV
+     *
+     * @api
+     */
+    public const SENTRY_ENVIRONMENT_CONSOLE = 'CONSOLE_SENTRY_ERROR_LOGGER_ENVIRONMENT';
 }
