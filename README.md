@@ -54,6 +54,20 @@ Add `SentryApplicationPlugin` to `Pyz\Yves\ShopApplication\ShopApplicationDepend
     }
 ```
 
+**Console / CLI**
+
+Add `SentryConsolePlugin` to `Pyz\Zed\Console\ConsoleDependencyProvider`
+```
+    public function getEventSubscriber(Container $container)
+    {
+        $eventSubscriber = parent::getEventSubscriber($container);
+        ...
+        $eventSubscriber[] = new SentryConsolePlugin();
+
+        return $eventSubscriber;
+    }
+```
+
 
 ## Configuration
 Configure the sentry logger in config_*.php
@@ -71,6 +85,7 @@ $config[SentryConstants::SENTRY_DSN] = 'https://###@###.ingest.sentry.io/###';
 $config[SentryConstants::SENTRY_ENVIRONMENT_ZED] = 'stage_zed';
 $config[SentryConstants::SENTRY_ENVIRONMENT_GLUE] = 'stage_glue';
 $config[SentryConstants::SENTRY_ENVIRONMENT_YVES] = 'stage_yves';
+$config[SentryConstants::SENTRY_ENVIRONMENT_CONSOLE] = 'stage_console';
 
 // error types which should be logged
 $config[SentryConstants::SENTRY_ERROR_TYPES] = E_ALL ^ E_DEPRECATED ^ E_USER_DEPRECATED
