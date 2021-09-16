@@ -16,4 +16,4 @@ $config[SentryConstants::SENTRY_ENVIRONMENT_YVES] = 'stage_yves';
 $config[SentryConstants::SENTRY_ENVIRONMENT_CONSOLE] = 'stage_console';
 
 // error types which should be logged
-$config[SentryConstants::SENTRY_ERROR_TYPES] = E_ALL ^ E_DEPRECATED ^ E_USER_DEPRECATED
+$config[SentryConstants::SENTRY_ERROR_TYPES] = E_ALL ^ E_DEPRECATED ^ E_USER_DEPRECATED;
