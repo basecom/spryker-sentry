@@ -1,8 +1,12 @@
 <?php
 
+/**
+ * Copyright (c) basecom GmbH & Co. KG
+ * Licensed under the MIT License
+ */
+
 namespace Basecom\Zed\Sentry\Communication\Plugin\Console;
 
-use Basecom\Zed\Sentry\SentryConfig;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Symfony\Component\Console\ConsoleEvents;
 use Symfony\Component\Console\Event\ConsoleErrorEvent;
@@ -11,7 +15,7 @@ use function Sentry\captureException;
 use function Sentry\init;
 
 /**
- * @method SentryConfig getConfig()
+ * @method \Basecom\Zed\Sentry\SentryConfig getConfig()
  */
 class SentryConsolePlugin extends AbstractPlugin implements EventSubscriberInterface
 {

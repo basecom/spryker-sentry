@@ -7,22 +7,21 @@
 
 namespace Basecom\Yves\Sentry\Plugin\Application;
 
-use Basecom\Yves\Sentry\SentryConfig;
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Yves\ErrorHandler\Plugin\Application\ErrorHandlerApplicationPlugin as SprykerErrorHandlerApplicationPlugin;
 use function Sentry\init;
 
 /**
- * @method SentryConfig getConfig()
+ * @method \Basecom\Yves\Sentry\SentryConfig getConfig()
  */
 class SentryApplicationPlugin extends SprykerErrorHandlerApplicationPlugin
 {
     /**
-     * @param ContainerInterface $container
-     *
-     * @return ContainerInterface
-     *
      * @api
+     *
+     * @param \Spryker\Service\Container\ContainerInterface $container
+     *
+     * @return \Spryker\Service\Container\ContainerInterface
      */
     public function provide(ContainerInterface $container): ContainerInterface
     {
