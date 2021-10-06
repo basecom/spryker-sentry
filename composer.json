@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Basecom\\": "src/"
+      "Basecom\\": "src/Basecom/"
     }
   },
   "minimum-stability": "dev",
