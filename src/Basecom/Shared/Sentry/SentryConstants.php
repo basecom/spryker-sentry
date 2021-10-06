@@ -16,6 +16,7 @@ interface SentryConstants
      * - default ''
      *
      * @api
+     * @var string
      */
     public const SENTRY_DSN = 'SENTRY_ERROR_LOGGER_DSN';
 
@@ -26,6 +27,7 @@ interface SentryConstants
      * - default E_ALL
      *
      * @api
+     * @var string
      */
     public const SENTRY_ERROR_TYPES = 'SENTRY_ERROR_TYPES';
 
@@ -36,6 +38,7 @@ interface SentryConstants
      * - default APPLICATION_ENV
      *
      * @api
+     * @var string
      */
     public const SENTRY_ENVIRONMENT_GLUE = 'GLUE_SENTRY_ERROR_LOGGER_ENVIRONMENT';
 
@@ -46,6 +49,7 @@ interface SentryConstants
      * - default APPLICATION_ENV
      *
      * @api
+     * @var string
      */
     public const SENTRY_ENVIRONMENT_ZED = 'ZED_SENTRY_ERROR_LOGGER_ENVIRONMENT';
 
@@ -56,6 +60,7 @@ interface SentryConstants
      * - default APPLICATION_ENV
      *
      * @api
+     * @var string
      */
     public const SENTRY_ENVIRONMENT_YVES = 'YVES_SENTRY_ERROR_LOGGER_ENVIRONMENT';
 
@@ -66,6 +71,7 @@ interface SentryConstants
      * - default APPLICATION_ENV
      *
      * @api
+     * @var string
      */
     public const SENTRY_ENVIRONMENT_CONSOLE = 'CONSOLE_SENTRY_ERROR_LOGGER_ENVIRONMENT';
 }

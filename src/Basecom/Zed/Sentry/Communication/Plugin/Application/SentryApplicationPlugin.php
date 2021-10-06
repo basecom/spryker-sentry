@@ -7,21 +7,20 @@
 
 namespace Basecom\Zed\Sentry\Communication\Plugin\Application;
 
-use Basecom\Zed\Sentry\SentryConfig;
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use function Sentry\init;
 
 /**
- * @method SentryConfig getConfig()
+ * @method \Basecom\Zed\Sentry\SentryConfig getConfig()
  */
 class SentryApplicationPlugin extends AbstractPlugin implements ApplicationPluginInterface
 {
     /**
-     * @param ContainerInterface $container
+     * @param \Spryker\Service\Container\ContainerInterface $container
      *
-     * @return ContainerInterface
+     * @return \Spryker\Service\Container\ContainerInterface
      */
     public function provide(ContainerInterface $container): ContainerInterface
     {

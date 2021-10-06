@@ -1,0 +1,22 @@
+image: php:7.4
+
+stages:
+  - code-style
+
+code-style:
+  stage: code-style
+  before_script:
+    - apt-get update
+    - apt-get install zip unzip
+    - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+    - php composer-setup.php
+    - php -r "unlink('composer-setup.php');"
+  script:
+    - php composer.phar install --no-interaction
+    - php composer.phar phpcs
+    - php composer.phar phpstan
+  only:
+    refs:
+      - 'develop'
+      - 'main'
+      - merge_requests

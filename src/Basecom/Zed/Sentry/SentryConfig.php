@@ -29,6 +29,8 @@ class SentryConfig extends AbstractBundleConfig
     }
 
     /**
+     * @param bool $forConsole
+     *
      * @return string
      */
     public function getSentryEnvironment(bool $forConsole = false): string

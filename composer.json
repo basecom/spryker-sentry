@@ -16,11 +16,13 @@
     "spryker/error-handler": "^2.1.0",
     "spryker/kernel": "^3.30.0",
     "sentry/sdk": "^3.1",
-    "spryker/symfony": "*"
+    "spryker/symfony": "*",
+    "phpstan/phpstan": "^0.12.99"
   }
   ,
   "require-dev": {
-    "roave/security-advisories": "dev-latest"
+    "roave/security-advisories": "dev-latest",
+    "spryker/code-sniffer": "^0.16.4"
   },
   "autoload": {
     "psr-4": {
@@ -28,5 +30,10 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "scripts": {
+    "phpcs": "phpcs -p -s --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/",
+    "phpcbf": "phpcbf -p --standard=vendor/spryker/code-sniffer/Spryker/ruleset.xml src/",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
 }

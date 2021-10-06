@@ -7,21 +7,20 @@
 
 namespace Basecom\Glue\Sentry\Plugin\Application;
 
-use Basecom\Glue\Sentry\SentryConfig;
 use Spryker\Glue\Kernel\AbstractPlugin;
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface;
 use function Sentry\init;
 
 /**
- * @method SentryConfig getConfig()
+ * @method \Basecom\Glue\Sentry\SentryConfig getConfig()
  */
 class SentryApplicationPlugin extends AbstractPlugin implements ApplicationPluginInterface
 {
     /**
-     * @param ContainerInterface $container
+     * @param \Spryker\Service\Container\ContainerInterface $container
      *
-     * @return ContainerInterface
+     * @return \Spryker\Service\Container\ContainerInterface
      */
     public function provide(ContainerInterface $container): ContainerInterface
     {
